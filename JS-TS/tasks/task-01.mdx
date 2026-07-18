@@ -1,0 +1,31 @@
+---
+topic: "TypeScript Fundamentals"
+taskNumber: 1
+---
+
+## Task 1: Define Core Types and Enums for the To-Do Domain
+
+**Description:**  
+Lay the foundation of the application by declaring the essential TypeScript types and enums. You will create a strongly-typed data model for a To-Do item that will be reused in every subsequent task.
+
+**Requirements:**
+1. Create an `enum` called `TodoStatus` with the following literal members: `PENDING`, `IN_PROGRESS`, `COMPLETED`.
+2. Create an `interface` `Todo` with properties  
+   - `id` (number) – unique identifier  
+   - `title` (string) – short title  
+   - `description` (string) – optional detailed text  
+   - `status` (`TodoStatus`) – current status  
+   - `createdAt` (Date) – creation timestamp (readonly)  
+3. Create a type alias `NewTodo` that omits `id` and `createdAt` from `Todo`.
+4. Export the types in `types.ts` (create the file if it does not exist).
+
+**Example:**
+```ts
+const todo: Todo = {
+  id: 42,
+  title: 'Finish project',
+  description: 'Refactor the data layer',
+  status: TodoStatus.IN_PROGRESS,
+  createdAt: new Date()
+};
+```

@@ -1,0 +1,33 @@
+---
+topic: "GIT CONFLICTS"
+taskNumber: 4
+---
+
+# Task 04: Simulating and Resolving Merge Conflicts
+
+Learn how to handle merge conflicts, a common scenario in team development.
+
+## Step-by-step Instructions
+
+1. **Create conflicting branches:**
+   - From `main`, create branch `feature/update-readme-v1`
+   - Modify the title in `README.md` to "My Awesome Project v1"
+   - Commit and switch back to `main`
+
+2. **Create another conflicting branch:**
+   - From `main`, create branch `feature/update-readme-v2`
+   - Modify the same title in `README.md` to "My Super Project v2"
+   - Commit this change
+
+3. **Create and resolve conflict:**
+   - Switch to `main` and merge `feature/update-readme-v1`
+   - Try to merge `feature/update-readme-v2` (this will create a conflict)
+   - Resolve the conflict by combining both titles creatively
+   - Complete the merge with a proper commit message
+
+## Document Your Work
+Create `solutions/task-04.txt` with:
+- All Git commands used
+- Content of the conflict markers you saw
+- How you resolved the conflict
+- Final commit message for the merge

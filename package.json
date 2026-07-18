@@ -1,0 +1,29 @@
+{
+  "name": "node.js-pre-training-pracrice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:all": "jest",
+    "test:docker-git": "jest tests/docker-git.test.js",
+    "test:db-nosql": "jest tests/db-nosql.test.js",
+    "test:js-ts-all": "jest --testPathPatterns=js-ts-task",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.4",
+    "ts-jest": "^29.1.0"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

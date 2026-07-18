@@ -1,0 +1,27 @@
+---
+topic: "Pure Functions & CRUD"
+taskNumber: 4
+---
+
+## Task 4: Implement Core CRUD Operations
+
+**Description:**  
+Create a set of **pure** functions that perform CRUD operations on an immutable array of `Todo`s.
+
+**Requirements:**
+1. In `solutions/todo-crud.ts` implement:
+   - `addTodo(state: Todo[], todo: Todo): Todo[]`
+   - `updateTodo(state: Todo[], id: number, update: Partial<Omit<Todo, 'id' | 'createdAt'>>): Todo[]`
+   - `removeTodo(state: Todo[], id: number): Todo[]`
+   - `getTodo(state: Todo[], id: number): Todo | undefined`
+2. None of the functions may mutate the original `state` array.
+3. Use TypeScript utility types (`Partial`, `Omit`) to type the update parameter.
+4. Throw an error if attempting to update or remove a non-existing todo.
+
+**Example:**
+```ts
+const state = [];
+const todo = createTodo({ title: 'Write tests' });
+const state2 = addTodo(state, todo);
+const state3 = updateTodo(state2, todo.id, { status: TodoStatus.COMPLETED });
+```

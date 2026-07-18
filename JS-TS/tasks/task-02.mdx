@@ -1,0 +1,41 @@
+---
+topic: "Advanced Functional Utilities"
+taskNumber: 2
+---
+
+## Task 2: Build a Mini Functional–Utility Library
+
+Create a zero-dependency utility module that implements **five** immutable, type-safe helpers to work with arrays. All helpers must be generic, side-effect-free, and must never mutate the input data.
+
+### File
+`JS-TS/solutions/array-helpers.ts`
+
+### Required API
+1. `mapArray<T, R>(source: readonly T[], mapper: (item: T, index: number) => R): R[]`
+2. `filterArray<T>(source: readonly T[], predicate: (item: T, index: number) => boolean): T[]`
+3. `reduceArray<T, R>(source: readonly T[], reducer: (acc: R, item: T, index: number) => R, initial: R): R`
+4. `partition<T>(source: readonly T[], predicate: (item: T) => boolean): [T[], T[]]` — returns a tuple **[pass, fail]**
+5. `groupBy<T, K extends PropertyKey>(source: readonly T[], keySelector: (item: T) => K): Record<K, T[]>` — groups items by a computed key.
+
+### Additional Constraints
+• All helpers must throw a `TypeError` if `source` is `null` or `undefined`.  
+• The original array reference must remain unchanged after a call (deep immutability not required).  
+• Re-implement logic from scratch; **do not** call the native `Array.prototype` counterparts.  
+• Use ES2017 syntax or newer (`const`, `let`, arrow functions, `for…of`).  
+• Add _exact_ exported names; no default export.
+
+### Usage Examples
+```ts
+import { mapArray, filterArray, reduceArray, partition, groupBy } from './array-helpers';
+
+mapArray([1, 2, 3], n => n * 2);                    // [2, 4, 6]
+filterArray(['a', 'bb', 'c'], s => s.length === 1); // ['a', 'c']
+reduceArray([1, 2, 3], (a, n) => a + n, 0);         // 6
+partition([1, 2, 3, 4], n => n % 2 === 0);          // [[2, 4], [1, 3]]
+const grouped = groupBy([
+  { id: 1, tag: 'home' },
+  { id: 2, tag: 'work' },
+  { id: 3, tag: 'home' }
+], t => t.tag);
+// grouped => { home: [ {…}, {…} ], work: [ {…} ] }
+```

@@ -1,0 +1,32 @@
+---
+topic: "GIT ADVANCED"
+taskNumber: 6
+---
+
+# Task 06: Git Rebase and Clean History Management
+
+Master advanced Git operations for maintaining clean project history.
+
+## Step-by-step Instructions
+
+1. **Create feature branch with multiple commits:**
+   - Create branch `feature/user-authentication`
+   - Make 4 separate small commits (add auth.js, update package.json, add middleware, add tests)
+   - Include one "fix typo" commit in the middle
+
+2. **Practice interactive rebase:**
+   - Use interactive rebase to squash the typo fix into the previous commit
+   - Reorder commits if needed
+   - Edit commit messages to be more descriptive
+
+3. **Rebase onto main:**
+   - Make a commit on `main` branch (simulate other developer's work)
+   - Rebase your feature branch onto the updated main
+   - Compare with merge approach using a separate test branch
+
+## Document Your Work
+Create `solutions/task-06.txt` with:
+- Commands used for interactive rebase
+- Before/after commit history (`git log --oneline`)
+- Explanation of when to use rebase vs merge
+- Any challenges you encountered

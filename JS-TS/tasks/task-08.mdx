@@ -1,0 +1,18 @@
+---
+topic: "Composition & Dependency Injection"
+taskNumber: 8
+---
+
+## Task 8: Compose Services with Dependency Injection
+
+**Description:**  
+Create a `TodoService` class that orchestrates business logic by consuming the `TodoApi`. Inject the dependency to keep the service testable and decoupled.
+
+**Requirements:**
+1. Implement `solutions/todo-service.ts` with a constructor that accepts an instance of `TodoApi`.
+2. Expose high-level methods:
+   - `create(title: string, description?: string): Promise<Todo>`
+   - `toggleStatus(id: number): Promise<Todo>`
+   - `search(keyword: string): Promise<Todo[]>` (search in title & description, case-insensitive).
+3. Do **not** touch the storage layer directly; always delegate to `TodoApi`.
+4. Add input validation and throw meaningful errors.

@@ -1,0 +1,43 @@
+---
+topic: "DOCKER COMMANDS"
+taskNumber: 9
+---
+
+# Task 09: Mastering Docker Commands and Image Management
+
+Learn essential Docker commands for image and container management in development workflow.
+
+## Step-by-step Instructions
+
+1. **Image Management Commands:**
+   - Pull `nginx:alpine`, `redis:7-alpine`, and `node:24-alpine` images
+   - List all images and inspect their details
+   - Tag the nginx image with your custom tag
+   - Save nginx image to a tar file and load it back
+   - Remove specific images and clean up unused images
+
+2. **Container Lifecycle Management:**
+   - Run nginx container in detached mode with port mapping
+   - Run redis container with custom name and restart policy
+   - Create a Node.js container without starting it, then start it manually
+   - Execute commands inside running containers (bash, redis-cli)
+   - Copy files between host and containers
+
+3. **Monitoring and Troubleshooting:**
+   - Monitor container resource usage with stats
+   - View and follow container logs with timestamps
+   - Inspect container configuration and mounted volumes
+   - Create and manage Docker volumes
+   - Network troubleshooting between containers
+
+4. **Cleanup and Maintenance:**
+   - Stop all running containers
+   - Remove containers, images, volumes, and networks
+   - Use system prune commands to clean up unused resources
+
+## Document Your Work
+Create `solutions/task-09.txt` with:
+- All Docker commands used with their purpose
+- Output of `docker system df` before and after cleanup
+- Examples of container inspection and logs
+- List of Docker commands you found most useful

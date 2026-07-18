@@ -1,0 +1,36 @@
+---
+topic: "DOCKER OPTIMIZATION"
+taskNumber: 5
+---
+
+# Task 05: Optimizing Docker Images with Multi-stage Builds
+
+Learn to create production-ready Docker images that are smaller and more secure.
+
+## Step-by-step Instructions
+
+1. **Create a simple TypeScript Node.js app:**
+   - Create `src/index.ts` with basic Express server on port 3000
+   - Create `package.json` with TypeScript dependencies and build script
+   - Create `tsconfig.json` for TypeScript compilation
+   - Use Node.js 24.x
+
+2. **Create single-stage Dockerfile first:**
+   - Build image that installs all dependencies and compiles TypeScript
+   - Measure the final image size
+
+3. **Create multi-stage Dockerfile:**
+   - **Stage 1 (builder)**: Use `node:24` to install dependencies and build TypeScript
+   - **Stage 2 (production)**: Use `node:24-alpine`, copy only built JS files and production dependencies
+   - Compare image sizes between single-stage and multi-stage builds
+
+4. **Add Docker ignore file:**
+   - Create `.dockerignore` to exclude `node_modules`, `src`, TypeScript files, and other unnecessary files
+   - Rebuild and compare build times
+
+## Document Your Work
+Create `solutions/task-05.txt` with:
+- Both Dockerfile versions (single-stage vs multi-stage)
+- Content of `.dockerignore`
+- Image size comparison using `docker images`
+- Commands used to build and test both images

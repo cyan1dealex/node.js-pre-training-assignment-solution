@@ -1,0 +1,37 @@
+---
+topic: "DOCKER FUNDAMENTALS"
+taskNumber: 3
+---
+
+# Task 03: Create and Run Your First Docker Container
+
+Introduction to Docker by creating and running a simple Node.js application in a container.
+
+## Step-by-step Instructions
+
+1. **Create a simple Node.js application:**
+   - Create `app.js` with a basic HTTP server that responds "Hello Docker!" on port 3000
+   - Create `package.json` with Node.js 24.x specified
+
+2. **Create your first Dockerfile:**
+   - Use `node:24-alpine` as base image
+   - Set working directory to `/app`
+   - Copy package files and install dependencies
+   - Copy application code
+   - Expose port 3000
+   - Define CMD to start the application
+
+3. **Build and run your container:**
+   - Build Docker image with tag `my-node-app:v1`
+   - Run container in detached mode mapping port 3000
+   - List running containers and inspect your container
+   - Test that your application responds correctly
+   - View container logs
+   - Stop and remove the container
+
+## Document Your Work
+Create `solutions/task-03.txt` with:
+- Content of your Dockerfile
+- All Docker commands used
+- Output of `docker images`, `docker ps`, and `docker inspect`
+- Response from your app (curl or browser test)

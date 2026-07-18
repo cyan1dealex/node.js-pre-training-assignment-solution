@@ -1,0 +1,18 @@
+---
+topic: "Generics & Design Patterns"
+taskNumber: 7
+---
+
+## Task 7: Implement a Generic In-Memory Repository
+
+**Description:**  
+Abstract the data-access layer by creating a reusable, generic repository that can store any entity type.
+
+**Requirements:**
+1. Create `solutions/repository.ts` with a generic class  
+   ```ts
+   export class InMemoryRepository<T extends { id: number }> { /* ... */ }
+   ```  
+   featuring methods: `add(entity: T)`, `update(id: number, patch: Partial<T>)`, `remove(id: number)`, `findById(id: number)`, `findAll()`.
+2. Ensure methods return `T` or `T[]` and keep the internal list private.
+3. Use this repository inside `TodoApi` instead of raw arrays (refactor previous task).

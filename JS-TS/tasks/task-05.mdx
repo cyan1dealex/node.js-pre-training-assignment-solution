@@ -1,0 +1,17 @@
+---
+topic: "Derived Data & Immutability"
+taskNumber: 5
+---
+
+## Task 5: Bulk Operations and Selectors
+
+**Description:**  
+Add functions that operate on the entire todo collection and compute derived information.
+
+**Requirements:**
+1. In `solutions/todo-bulk.ts` implement:
+   - `toggleAll(state: Todo[], completed: boolean): Todo[]` – marks every item as completed / not completed.
+   - `clearCompleted(state: Todo[]): Todo[]` – removes completed todos.
+   - `countByStatus(state: Todo[], status: TodoStatus): number`
+2. All functions must be pure.
+3. Use higher-order functions (`map`, `filter`, `reduce`) – do not use `for` loops.

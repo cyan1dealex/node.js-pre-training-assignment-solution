@@ -1,0 +1,25 @@
+---
+topic: "Async & Error Handling"
+taskNumber: 6
+---
+
+## Task 6: Simulate Remote API with Async/Await
+
+**Description:**  
+Create an asynchronous wrapper that pretends to call a remote REST API. You will practise `Promise`, `async/await`, and typed error handling.
+
+**Requirements:**
+1. In `solutions/todo-api.ts` implement an in-memory `TodoApi` class with methods:  
+   - `getAll(): Promise<Todo[]>`  
+   - `add(newTodo: NewTodo): Promise<Todo>`  
+   - `update(id: number, update: Partial<Omit<Todo, 'id' | 'createdAt'>>): Promise<Todo>`  
+   - `remove(id: number): Promise<void>`  
+2. Each method must simulate network latency of **300-600 ms** using `setTimeout`.
+3. Throw a `TodoNotFoundError` (create a custom `class` extending `Error`) when necessary.
+4. Use `async/await` syntax in your implementation.
+
+**Example:**
+```ts
+await api.add({ title: 'Persist data on server' });
+const todos = await api.getAll();
+```

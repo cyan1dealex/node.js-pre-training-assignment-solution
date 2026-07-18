@@ -1,0 +1,42 @@
+---
+topic: "DOCKER NETWORKS & VOLUMES"
+taskNumber: 10
+---
+
+# Task 10: Advanced Docker Networking and Data Persistence
+
+Master Docker networking concepts and volume management for real-world applications.
+
+## Step-by-step Instructions
+
+1. **Custom Network Creation and Management:**
+   - Create custom bridge network called `app-network`
+   - Create custom network with specific subnet configuration
+   - List and inspect network configurations
+   - Test connectivity between containers on same network
+
+2. **Multi-container Communication:**
+   - Run MongoDB container on custom network with named volume
+   - Run Mongo Express (web interface) on same network
+   - Run simple Node.js app that connects to MongoDB by service name
+   - Test that all services can communicate properly
+
+3. **Volume Types and Data Persistence:**
+   - Create named volume for database data
+   - Use bind mount to share code during development
+   - Create tmpfs mount for temporary data
+   - Test data persistence by stopping/starting containers
+
+4. **Network Isolation Testing:**
+   - Create two separate networks
+   - Run containers on different networks
+   - Demonstrate isolation between networks
+   - Connect container to multiple networks
+
+## Document Your Work
+Create `solutions/task-10.txt` with:
+- All network and volume commands used
+- Network topology diagram (text-based)
+- Output of `docker network ls` and `docker volume ls`
+- Test results showing container communication
+- Explanation of different volume types used

@@ -1,0 +1,20 @@
+---
+topic: "Application Entry Point"
+taskNumber: 10
+---
+
+## Task 10: Build the `ToDoManager` Facade
+
+**Description:**  
+Create a single class that stitches every layer together and acts as the public API of your library or CLI app.
+
+**Requirements:**
+1. Implement `solutions/todo-manager.ts` exporting class `ToDoManager`.
+2. Internally instantiate `InMemoryRepository`, `TodoApi`, and `TodoService`.
+3. Expose a minimal synchronous interface:  
+   - `init(): Promise<void>` – seed with demo data  
+   - `add(title: string, description?: string): Promise<void>`  
+   - `complete(id: number): Promise<void>`  
+   - `list(): Promise<Todo[]>`
+4. Provide a small **Node.js CLI** (in `solutions/index.ts`) that uses `process.argv` (or another lightweight approach) to call the manager.
+5. Re-run all tests and ensure green.

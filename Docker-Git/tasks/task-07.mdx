@@ -1,0 +1,37 @@
+---
+topic: "DOCKER COMPOSE"
+taskNumber: 7
+---
+
+# Task 07: Orchestrating Multiple Services with Docker Compose
+
+Learn to manage multi-container applications using Docker Compose.
+
+## Step-by-step Instructions
+
+1. **Create a simple Node.js API:**
+   - Create basic Express app (Node.js 24.x) with one GET endpoint `/health` that returns JSON status
+   - Create endpoint `/data` that returns hardcoded JSON array
+   - Create Dockerfile for this app
+
+2. **Create Docker Compose with database:**
+   - Add PostgreSQL service using `postgres:16` image
+   - Add pgAdmin service using `dpage/pgadmin4` image for database management
+   - Configure environment variables for database connection
+   - Set up proper networking between services
+   - Add volume for PostgreSQL data persistence
+
+3. **Test the multi-service setup:**
+   - Start all services with `docker-compose up`
+   - Access your Node.js API endpoints
+   - Access pgAdmin interface in browser
+   - Connect pgAdmin to PostgreSQL service
+   - Check service logs individually
+   - Stop services gracefully
+
+## Document Your Work
+Create `solutions/task-07.txt` with:
+- Complete `docker-compose.yml` file
+- All Docker Compose commands used
+- URLs and credentials for accessing services
+- Output of `docker-compose ps` when services are running

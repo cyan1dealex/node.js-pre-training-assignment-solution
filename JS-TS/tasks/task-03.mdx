@@ -1,0 +1,27 @@
+---
+topic: "Factory Functions & Immutability"
+taskNumber: 3
+---
+
+## Task 3: Create a Todo Factory with Unique IDs
+
+**Description:**  
+Write a factory function that returns fully-formed `Todo` objects while guaranteeing unique identifiers.
+
+**Requirements:**
+1. In `solutions/todo-factory.ts` implement `createTodo(todo: NewTodo): Todo`.
+2. The function must
+   - generate a unique incremental `id` (start with `1`)  
+   - set `createdAt` to the current time  
+   - default the `status` field to `TodoStatus.PENDING`
+3. Keep the internal counter private (use a closure or module scope variable).
+4. Do **not** mutate the input object.
+
+**Example:**
+```ts
+const a = createTodo({ title: 'Learn TypeScript', description: '' });
+const b = createTodo({ title: 'Refactor code' });
+
+console.log(a.id); // 1
+console.log(b.id); // 2
+```

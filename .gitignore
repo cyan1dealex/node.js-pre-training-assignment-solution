@@ -1,0 +1,34 @@
+# Node
+node_modules/
+.env
+*.log
+dist/
+build/
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# TypeScript
+*.tsbuildinfo
+
+# Jest
+coverage/
+
+# Compiled output
+*.out.js
+*.out.ts
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore local env files
+.env.* 
