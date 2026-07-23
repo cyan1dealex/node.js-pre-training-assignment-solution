@@ -2,7 +2,7 @@ interface Todo {
     id: number,
     title: string,
     description?: string,
-    status: TodoStatus,
+    status?: TodoStatus,
     readonly createdAt: Date
 }
 
